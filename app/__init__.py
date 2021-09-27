@@ -1,11 +1,10 @@
-from flask import Flask, render_template
+from flask import Flask
 from flask_socketio import SocketIO
 
 socketio = SocketIO()
 
 
 def create_app(debug=False):
-    """Create an application."""
     app = Flask(__name__)
     app.debug = debug
     app.config['SECRET_KEY'] = 'secret!'
